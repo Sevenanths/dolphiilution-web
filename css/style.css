@@ -1,0 +1,395 @@
+html
+{
+	height: 100%;
+	width: 100%;
+	overflow-x: none;
+}
+
+body
+{
+	height: calc(100% - 45px);
+	margin: 0;
+	font-family: Droid Sans;
+	background-color: #eeeeee;
+	background-size: cover;
+	font-size: medium;
+	overflow: hidden;
+	color: #111111;
+}
+
+.pane
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+}
+
+.pane.options
+{
+	z-index: -1;
+	text-align: center;
+	display: table;
+}
+
+.pane.options h1
+{
+	margin-bottom: 0;
+}
+
+.pane.options h3
+{
+	margin-bottom: 0;
+}
+
+.pane.options h1+h3
+{
+	margin-top: 0;
+}
+
+#loading
+{
+	display: none;
+	margin: 20px;
+}
+
+#state
+{
+	line-height: 30px;
+	margin: 20px;
+}
+
+.about
+{
+	width: auto;
+	height: auto;
+
+	margin-top: auto;
+	margin-right: auto;
+
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.pane.patching
+{
+	z-index: 1;
+	top: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	background-size: cover;
+}
+
+.pane.coverflow
+{
+	z-index: 0;
+}
+
+#coverflow
+{
+    height: 100%;
+    width: 100%;
+
+    perspective: 800px;
+    -webkit-perspective: 800px;
+}
+
+#coverflow section
+{
+
+    display: position;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    width: 480px;
+    height: 680px;
+    
+    margin-left: -240px;
+    margin-top: -340px;
+    
+    background-color: white;
+    background-size: cover;
+    background-position: 480 0;
+    
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+   
+    -webkit-transition: all 300ms ease-in;
+     -moz-transition: all 300ms ease-in;
+        -ms-transition: all 300ms ease-in;
+         -o-transition: all 300ms ease-in;
+            transition: all 300ms ease-in;
+
+    /*-webkit-box-reflect: below 0*/
+    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), to(white)); 
+}
+
+.content
+{
+	overflow: hidden;
+	margin-top: 45px;
+	position: relative;
+	overflow-x: none;
+	height: 100%;
+}
+
+.overlay
+{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.actionbar
+{
+	top: 0;
+	height: 45px;
+	/*margin-bottom: 15px;*/
+	width: 100%;
+	background-color: #2fb5ff;
+	position: fixed;
+	z-index: 5;
+}
+
+a
+{
+	color: #2fb5ff;
+}
+
+.actionbarbranding
+{
+	float: left;
+}
+
+.actionbargame
+{
+	float: right;
+	margin-right: 48px;
+}
+
+.actionbaricon
+{
+	width: 32px;
+	height: 32px;
+
+	margin: 0;
+    position: absolute;               /* 2 */
+    top: 50%;                         /* 3 */
+    transform: translate(0, -50%);
+
+    margin-left: 6px;
+
+	background-image: url(../img/icon.png);
+}
+
+.actionbartitle
+{
+	color: #ffffff;
+	height: 45px;
+	line-height: 45px;
+	font-size: 22px;
+	margin-left: 48px;
+
+	vertical-align: middle;
+}
+
+.actionbargame
+{
+	color: #ffffff;
+	height: 45px;
+	line-height: 45px;
+	font-size: 22px;
+	margin-left: 48px;
+
+	position: relative;
+	vertical-align: middle;
+}
+
+.card
+{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	/*left: 15px;*/
+
+	width: 50%;
+
+	/*background:	rgba(255, 255, 255, 0.5);
+    border:	1px solid #AAA;
+    border-bottom: 3px solid #BBB;*/
+
+    overflow-y: none;
+}
+
+.cardsmall
+{
+	width: 50%;
+    background:	#FFF;
+    border:	1px solid #AAA;
+    border-bottom: 3px solid #BBB;
+    padding: 0px;
+    margin:	15px;
+    margin-left: 25%;
+	margin-right: 25%;
+    overflow: hidden;
+}
+
+.patchtable
+{
+	width: 90%;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+
+}
+
+.section
+{
+	background:	rgba(255, 255, 255, 0.8);
+	border:	1px solid #AAA;
+    border-bottom: 3px solid #BBB;
+    margin-bottom: 15px; 
+}
+
+.patchtable .choice
+{
+	text-align: right;
+}
+
+.patchtable td
+{
+	width: 50%;
+}
+
+.patchtable select
+{
+	width: 50%;
+	background-color: transparent;
+	border: 0px;
+}
+
+.card h1, .cardsmall h1
+{
+	text-align: center;
+    margin:	0px;
+    padding: 15px;
+    padding-bottom:	0px;
+}
+
+.card h2.title
+{
+	margin-bottom: 0px;
+}
+
+.card h3.price
+{
+	margin-top: 5px;
+}
+
+.card p, .cardsmall p
+{
+    margin: 0px;
+    padding: 15px;
+}
+
+.card form
+{
+	margin: 0px;
+	padding-top: 0;
+}
+
+.card textarea
+{
+	width: 100%;
+	height: 100px;
+	resize: none;
+}
+
+.card .send
+{
+	margin-top: 5px;
+}
+
+form .productadd
+{
+	display: table;
+	padding: 5px;
+	padding-left: 0;
+}
+
+p .productadd
+{
+	display: table-row;
+	padding: 0px;
+}
+
+label .productadd
+{
+	display: table-cell;
+}
+
+input .productadd
+{
+	display: table-cell;
+}
+
+h6
+{
+	text-align: center;
+	font-size: 72px;
+	margin: 10px;
+}
+
+.productimage
+{
+	width: auto;
+	height: 300px;
+}
+
+.chart
+{
+	width: 80%;
+	height: 300px;
+}
+
+#showcase
+{
+	top: 50%;
+	margin-top: -340px;
+	margin-left: 75px;
+
+	position: absolute;
+
+	width: 480px;
+	height: 680px;
+}
+
+@media (max-width : 768px) {
+.card
+{
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.chart
+{
+	width: 100%;
+}
+}
+
+@media (min-width: 768px) and (max-width : 1280px) {
+.card
+{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.chart
+{
+	width: 80%;
+}
+}

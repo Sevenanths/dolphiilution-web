@@ -12,8 +12,9 @@ $sd 			= "sd/";
 $riivolution	= $sd . "/riivolution";
 
 $maindol 		= "/main.dol";
+$apploader		= "/apploader.img";
 
-$dolphii		= "/NAS/Games/Nintendo Wii/Retail/dolphii/";
+$dolphii		= $gamespath . "/dolphii/";
 $mountfuse		= $dolphii . "/fuse/";
 $mountdata		= $mountfuse . "/iso/part/data/";
 $mountfiles		= $mountdata . "/files/";
@@ -345,6 +346,7 @@ function init($dir)
 	global $mountsys;
 	global $patchsys;
 	global $maindol;
+	global $apploader;
 
 	/* create the patch directory after cleansing */
 	mkdir($dir, 0777);
@@ -352,6 +354,7 @@ function init($dir)
 	mkdir($patchsys);
 	/* copy over the main dol, since we can't symlink it as it might need to be patched */
 	copy($mountsys . $maindol, $patchsys . $maindol); 
+	copy($mountsys . $apploader, $patchsys . $apploader);
 }
 
 function copyDolphiiDol($dolphiidol)

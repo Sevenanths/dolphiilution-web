@@ -5,8 +5,7 @@ Dolphiilution is a PHP/JS project which allows you to play altered games on [Dol
 
 Notice
 --------------------
-Running games from a folder is broken in the current builds of Dolphin. Use [this build](https://dolphin-emu.org/download/dev/2b5945ae07dbbf46e6e38d2524bf2112ef2b6324/?nocr=true)
-until the problem is fixed.
+In some earlier versions of Dolphin from around June 2015, running games from a folder was broken. Use the [latest build](https://dolphin-emu.org/download/) to prevent any issues.
 
 How it works
 --------------------
